@@ -18,7 +18,9 @@ Labs are on **Wednesdays**.
 
 ### Prerequisites
 
-You've gotta know sh*t about **statistics and probability**, **databases and SQL**, **Python**.
+- **statistics and probability**
+- **databases and SQL** 
+- **Python**.
 
 ## Introduction to ML and Data Mining
 
