@@ -1,0 +1,115 @@
+\documentclass[]{article}
+\usepackage[a4paper, portrait, margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\setlength\parindent{0pt}
+
+%opening
+\title{Summary \\ \large Fundamentals of Artificial Intelligence and Knowledge Representation - Module 1}
+\author{Daniele Santini}
+
+\begin{document}
+
+%\maketitle
+
+\section{Search}
+
+Total cost = Time to find a solution (off-line cost) + Cost of the solution path (
+on-line cost).
+
+Strategy evaluation criteria:
+\begin{itemize}
+	\item \textbf{Completeness}: does the strategy guarantees to find a solution if one exists?
+	\item \textbf{Time complexity}: how long does it take to find a solution?
+	\item \textbf{Space complexity}: how much memory is needed to carry out the search?
+	\item \textbf{Optimality}: does the strategy find the best solution when there are more solutions?
+\end{itemize}
+
+\section{Games}
+
+TODO
+
+\section{Constraint Programming}
+
+TODO
+
+\subsection{Propagation algorithms}
+
+\begin{itemize}
+	\item \textbf{Standard Backtracking}: Assign without checking future constraints, then check validity
+	\item \textbf{Forward Checking}: After each assignment propagate the constraints from the assigned value to the free values
+	\item \textbf{Partial Look Ahead}: After Forward Checking check constraints between free values in one direction
+	\item \textbf{Full Look Ahead}: After Forward Checking check constraints between free values in both directions
+\end{itemize}
+
+\section{Algorithms}
+
+\begin{center}
+	\begin{tabular}{ c l }
+		b & branching factor\\
+		d & solution depth\\
+		m & maximum depth of the search tree\\
+		l & depth limit\\
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{|p{12em}|p{4.5em}|p{4.5em}|p{3em}|p{3em}|p{13em}|}
+		\hline
+		\textbf{Name} & \textbf{Complete} & \textbf{Optimal} & \textbf{Time} & \textbf{Space} & \textbf{Notes} \\
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Non-informed search strategies}} \\
+		\hline
+		Breadth-First & Yes & Yes & $b^d$ & $b^d$ & Add the children nodes to the fringe, then iterate over them in FIFO order. \\
+		\hline
+		Uniform-Cost & Yes & Yes & $b^d$ & $b^d$ & Each node has a cost. Add the children to the fringe, then iterate over them in order of passed path cost. \\
+		\hline
+		Depth-First & No & No & $b^m$ & $bm$ & Expand the first child, then open it. Proceed until a leaf is found. If a node is not a success, backtrack and open it's brother. \\
+		\hline
+		Depth-First, limited depth & If $l \ge d$ & No & $b^l$ & $bl$ & Like Depth-First, with a max depth. \\
+		\hline
+		Iterative Deepening & Yes & Yes & $b^d$ & $bd$ & Like Depth-First with limited depth, but at each failure increase the max depth and restart. \\
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Informed search strategies}} \\
+		\hline
+		Best-First & No & No & $b^d$ & $b^d$ & Breadth-first, estimating the cost of future steps as heuristic. \\
+		\hline
+		A* & Yes & Optimistic heuristic &  &  & Breadth-first, estimating the cost of passed and future steps as heuristic. \\
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Local search}} \\
+		\hline
+		TODO & TODO & TODO & TODO & TODO & \\
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Swarm intelligence}} \\
+		\hline
+		Ant Colony Optimization &  &  &  &  & Based on ants' behavior, positive feedback based on pheromone trails \\
+		\hline
+		Artificial Bee Colony &  &  &  &  & Individuals with different functions \\
+		\hline
+		Particle Swarm Optimization &  &  &  &  & Based on the observation of bird flocks or fish shoals. Stigmergy is used as communication. \\
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Games}} \\
+		\hline
+		Min-Max & Yes & Yes & $b^m$ & $bm$ & Min player minimizes, Max player maximizes. Graph search alternating moves and assuming the opponent plays at its best. \\
+		\hline
+		Min-Max, $\alpha/\beta$ pruning & Yes & Yes & $\le b^m$, $\ge b^{\frac{m}{2}}$ &  & Keep track of max and min value found, cut branches that would never be accessed.  \\
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Constraint programming}} \\
+		\hline
+		Generate and Test &  &  &  &  & No propagation: generate full solution then check constraints. \\
+		\hline
+		Standard Backtracking &  &  &  &  & No propagation: after each assignment check constraints on the assigned value. \\
+		\hline
+		Forward Checking (FC) &  &  &  &  & Propagation: after each assignment propagate constraints from the assigned value to the free values. \\
+		\hline
+		Partial LookAhead &  &  &  &  & Propagation: like FC, plus check in one direction between free values. \\
+		\hline
+		Full LookAhead &  &  &  &  & Propagation: like FC, plus check in both directions between free values \\
+		\hline
+	\end{tabular}
+	%\caption{Algorithms for Artificial Intelligence}
+\end{center}
+
+\end{document}

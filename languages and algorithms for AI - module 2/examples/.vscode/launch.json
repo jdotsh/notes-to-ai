@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "scala",
+            "name": "Run QuickSort",
+            "request": "launch",
+            "mainClass": "QuickSort",
+            "args": []
+        },
+        {
+            "type": "scala",
+            "name": "Run T9",
+            "request": "launch",
+            "mainClass": "T9",
+            "args": []
+        },
+        {
+            "type": "scala",
+            "name": "Run Mandelbrot",
+            "request": "launch",
+            "mainClass": "Mandelbrot",
+            "args": []
+        },
+        {
+            "type": "scala",
+            "name": "Run NewtonSQRT",
+            "request": "launch",
+            "mainClass": "NewtonSQRT",
+            "args": []
+        },
+        {
+            "type": "scala",
+            "name": "Run HigherOrderSum",
+            "request": "launch",
+            "mainClass": "HigherOrderSum",
+            "args": []
+        },
+    ]
+}
