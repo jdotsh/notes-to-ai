@@ -1,4 +1,4 @@
-# Machine Learning - prof. Claudio Sartori
+# Machine Learning - Prof. Claudio Sartori
 
 Two MsCs, Computer Science and AI.
 
@@ -43,8 +43,6 @@ They developed powerful techniques to **analyse facts** and find **relations** b
 **Machine Learning**: field of study that gives a computer the ability to improve its behaviour, without being explicitly programmed! The computer will then learn from new data, examples, and not by *being told*.
 
 **Data Mining**: we mean a computational process which we organize to **discover patterns** in data. We are, of course, interested in large amounts of data. This term is approximately 30 years old, and this *science* uses concepts and tools from *AI, ML, statistics, DBMS*. This tool learns from data, and it is therefore a **data-driven approach**: data are our *power source.* 
-
-
 
 ![Statistics, DM, ML](./res/statistics-dm-ml.png)
 
